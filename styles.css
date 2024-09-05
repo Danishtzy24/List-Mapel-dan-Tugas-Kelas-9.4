@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #87CEEB; /* Changed to light blue */
+    background-color: #ccca3b; /* Changed to light blue */
     color: white;
     padding: 20px;
     text-align: center;
@@ -72,17 +72,17 @@ main {
 }
 
 #schedule-table th, #tasks-list th {
-    background-color: #87CEEB; /* Changed to light blue */
+    background-color: #ebe687; /* Changed to light blue */
     color: white;
 }
 
 #exam-table th {
-    background-color: #ADD8E6; /* Changed to light blue */
+    background-color: #e5e6ad; /* Changed to light blue */
     color: white;
 }
 
 .day-name {
-    background-color: #ADD8E6; /* Changed to light blue */
+    background-color: #c2c22d; /* Changed to light blue */
     font-weight: bold;
     color: #ffffff;
 }
