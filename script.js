@@ -37,6 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const taskData = [
         {
+            subject: "IPS",
+            description: "Bukpet hal 38 Tugas Individu 1.3 dan latihan 1.3 di buku tulis",
+            dueDate: new Date("2024-09-09"),
+        },
+        {
             subject: "IPA",
             description: "Kerjakan Lks IPA hal 44 Latihan 1 (no 2 - 5 dibuku tulis)",
             dueDate: new Date("2024-09-09"),
