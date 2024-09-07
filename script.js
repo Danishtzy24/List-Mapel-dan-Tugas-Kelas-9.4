@@ -34,9 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { name: "MTK", teacher: "Lely Farhani, S.Pd" }
         ]}
     ];
-
-    const taskData = [
-        {
+{
             subject: "IPS",
             description: "Bukpet hal 38 Tugas Individu 1.3 dan latihan 1.3 di buku tulis",
             dueDate: new Date("2024-09-09"),
@@ -76,28 +74,24 @@ document.addEventListener("DOMContentLoaded", () => {
             description: "Hafalan surah Al Qiyamah",
             dueDate: new Date("2024-09-12"),
         },
-    ];
 
     const examData = [
-        {
-            subject: "N/A",
-            description: "N/A",
-            date: new Date("N/A"),
-        },
         // Tambahkan detail ulangan lainnya di sini
     ];
 
     const subjectColors = {
-        "IPA": "seagreen",
         "Bahasa Indonesia": "seagreen",
+        "Bahasa Inggris": "seagreen",
         "PJOK": "seagreen",
-        "SBK (Jika Sudah Menggambar)": "seagreen",
+        "SBK": "seagreen",
         "PKN": "seagreen",
         "IT": "seagreen",
         "SKI": "seagreen",
         "Tahfidz": "seagreen",
         "IPS": "seagreen",
         "Akidah Akhlak": "seagreen",
+        "IPA": "seagreen",
+        "MTK": "seagreen",
         // Tambahkan warna untuk mata pelajaran lainnya sesuai kebutuhan
     };
 
@@ -186,26 +180,27 @@ document.addEventListener("DOMContentLoaded", () => {
         taskData.forEach((task) => {
             const taskDiv = document.createElement("div");
             taskDiv.classList.add("task-item");
-    
+
             const dueDateString = task.dueDate.toLocaleString("id-ID", {
                 weekday: "long",
                 year: "numeric",
                 month: "long",
                 day: "numeric",
             });
-    
+
             // Menentukan warna berdasarkan status
             const statusColor = task.status === "kelar" ? "green" : "red";
-    
+
             // Menentukan warna berdasarkan nama pelajaran
             const subjectColor = subjectColors[task.subject] || "black";
-    
+
             taskDiv.innerHTML = `
                 <strong style="color: ${subjectColor}">${task.subject}</strong> - ${task.description}<br>
+                Tugasnya Danish: <span style="color: ${statusColor}">${task.status}</span><br>
                 Tenggat: ${dueDateString}
             `;
             taskSection.appendChild(taskDiv);
-    
+
             const notificationTime = new Date(task.dueDate);
             notificationTime.setDate(notificationTime.getDate() - 1);
             notificationTime.setHours(19, 0, 0); // Set waktu ke jam 8 malam sehari sebelumnya
@@ -213,7 +208,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 scheduleNotification(notificationTime, task.subject);
             }
         });
-    
     }
 
     function scheduleNotification(time, subject) {
