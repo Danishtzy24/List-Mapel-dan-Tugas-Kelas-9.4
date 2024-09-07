@@ -46,6 +46,36 @@ document.addEventListener("DOMContentLoaded", () => {
             description: "Kerjakan Lks IPA hal 44 Latihan 1 (no 2 - 5 dibuku tulis)",
             dueDate: new Date("2024-09-09"),
         },
+        {
+            subject: "Bahasa Inggris",
+            description: "Recount Teks",
+            dueDate: new Date("2024-09-09"),
+        },
+        {
+            subject: "Seni Budaya",
+            description: "Kerjakan Lks hal 14, 20, 24",
+            dueDate: new Date("2024-09-09"),
+        },
+        {
+            subject: "Bahasa Indonesia",
+            description: Bikin Teks Prosedur",
+            dueDate: new Date("2024-09-10"),
+        },
+        {
+            subject: "MTK",
+            description: "Mtk latihan 1 soal limas",
+            dueDate: new Date("2024-09-11"),
+        },
+        {
+            subject: "Qurdist",
+            description: "Hafalan 2 hadist Qurdist (bagi yang belum)",
+            dueDate: new Date("2024-09-11"),
+        },
+        {
+            subject: "Tahfidz",
+            description: "Hafalan surah Al Qiyamah",
+            dueDate: new Date("2024-09-12"),
+        },
     ];
 
     const examData = [
